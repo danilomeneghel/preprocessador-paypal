@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+        version="2.0">
+	<persistence-unit name="paypal" >
+	
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+	
+		<class>com.paypal.entities.externo.Rede</class>
+		<class>com.paypal.entities.externo.Empresa</class>
+		<class>com.paypal.entities.externo.Loja</class>
+		<class>com.paypal.entities.externo.Adquirente</class>
+		<class>com.paypal.entities.externo.Bandeira</class>
+		<class>com.paypal.entities.externo.CodigoOrigem</class>
+		<class>com.paypal.entities.entity.ArquivoFisico</class>
+		<class>com.paypal.entities.entity.OrigemArquivo</class>
+		<class>com.paypal.entities.entity.OrigemArquivoPath</class>
+		<class>com.paypal.entities.entity.OrigemArquivoArq</class>
+		<class>com.paypal.entities.entity.LayoutOrigemArquivo</class>
+		<class>com.paypal.entities.entity.LayoutTipoRegistro</class>
+		<class>com.paypal.entities.entity.LayoutInformacao</class>
+		<class>com.paypal.entities.entity.LayoutCampo</class>
+		<class>com.paypal.entities.entity.ArquivoDiario</class>
+		<class>com.paypal.entities.entity.ArquivoDiarioLoja</class>
+		<class>com.paypal.entities.entity.ArquivoLojaArq</class>
+		<class>com.paypal.entities.entity.ArquivoLoja</class>
+		<class>com.paypal.entities.entity.ArquivoDiarioLojaLog</class>
+		<class>com.paypal.entities.entity.RegistroArquivo</class>
+		<class>com.paypal.entities.entity.RegistroArquivoClob</class>
+		
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+			
+			<property name="hibernate.show_sql" value = "false" />
+	        <property name="hibernate.format_sql" value="false" />
+			
+			<property name="hibernate.cache.use_query_cache" value="true"/>
+	    	<!-- <property name="hibernate.cache.use_second_level_cache" value="true" /> -->
+	        <property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>
+		
+		</properties>
+	
+	
+	</persistence-unit>
+</persistence>
